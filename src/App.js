@@ -1,14 +1,9 @@
-import './App.css';
-import React from 'react';
+import React from "react";
 import PortfolioLayout from "./components/PortfolioLayout";
+import "./App.css";
 
 function App() {
-  return (
-    <div>
-      <PortfolioLayout />
-    </div>
-
-  );
+    return <PortfolioLayout />;
 }
 
 export default App;

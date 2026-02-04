@@ -257,3 +257,150 @@ function SectionCard({ id, title, children, innerRef }) {
 }
 
 export default PortfolioLayout;
+// import React, { useEffect, useState, useRef } from "react";
+// import { doc, getDoc } from "firebase/firestore";
+// import { db } from "../firebaseConfig";
+//
+// const sections = [
+//     { id: "summary", label: "SUMMARY" },
+//     { id: "overview", label: "OVERVIEW" },
+//     { id: "workHistory", label: "WORK HISTORY" },
+//     { id: "education", label: "EDUCATION" },
+//     { id: "skills", label: "SKILLS" },
+//     { id: "affiliations", label: "AFFILIATIONS" },
+//     { id: "timeline", label: "TIMELINE" },
+//     { id: "contact", label: "CONTACT" },
+// ];
+//
+// function PortfolioLayout() {
+//     const [data, setData] = useState(null);
+//     const sectionRefs = useRef({});
+//
+//     useEffect(() => {
+//         const fetchProfile = async () => {
+//             try {
+//                 const snap = await getDoc(doc(db, "profile", "main"));
+//                 if (snap.exists()) {
+//                     setData(snap.data());
+//                 }
+//             } catch (err) {
+//                 console.error("Error loading profile:", err);
+//             }
+//         };
+//         fetchProfile();
+//     }, []);
+//
+//     const scrollTo = (id) =>
+//         sectionRefs.current[id]?.scrollIntoView({ behavior: "smooth" });
+//
+//     if (!data) {
+//         return (
+//             <div className="min-h-screen flex items-center justify-center">
+//                 Loading portfolio…
+//             </div>
+//         );
+//     }
+//
+//     return (
+//         <div className="max-w-7xl mx-auto px-4 md:px-6 py-8 flex gap-8">
+//             {/* Sidebar */}
+//             <aside className="hidden md:block w-1/4">
+//                 <div className="bg-white rounded-xl shadow-sm p-6 sticky top-8">
+//                     <nav className="space-y-4 text-xs tracking-[0.25em]">
+//                         {sections.map((s) => (
+//                             <button
+//                                 key={s.id}
+//                                 onClick={() => scrollTo(s.id)}
+//                                 className="block text-left text-slate-400 hover:text-slate-900 transition"
+//                             >
+//                                 {s.label}
+//                             </button>
+//                         ))}
+//                     </nav>
+//                 </div>
+//             </aside>
+//
+//             {/* Main */}
+//             <main className="flex-1 space-y-8">
+//                 {/* Header */}
+//                 <section className="bg-white rounded-xl shadow-sm overflow-hidden">
+//                     <img
+//                         src="/profbackground.jpg"
+//                         alt="Banner"
+//                         className="w-full h-52 object-cover"
+//                     />
+//                     <div className="p-6 flex justify-between items-center">
+//                         <div>
+//                             <h1 className="text-3xl font-bold text-slate-900">
+//                                 {data.name}
+//                             </h1>
+//                             <p className="text-sm text-slate-500 mt-2">📍 {data.location}</p>
+//                         </div>
+//                         <button
+//                             onClick={() => scrollTo("contact")}
+//                             className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-full text-sm font-semibold shadow"
+//                         >
+//                             CONTACT ME
+//                         </button>
+//                     </div>
+//                 </section>
+//
+//                 {sections.slice(0, -1).map((s) => (
+//                     <Section
+//                         key={s.id}
+//                         id={s.id}
+//                         title={s.label}
+//                         innerRef={(el) => (sectionRefs.current[s.id] = el)}
+//                     >
+//                         {Array.isArray(data[s.id]) ? (
+//                             <ul className="flex flex-wrap gap-2">
+//                                 {data[s.id].map((item, i) => (
+//                                     <li
+//                                         key={i}
+//                                         className="bg-slate-100 px-4 py-1.5 rounded-full text-xs"
+//                                     >
+//                                         {item}
+//                                     </li>
+//                                 ))}
+//                             </ul>
+//                         ) : (
+//                             <p className="text-slate-700 whitespace-pre-line">
+//                                 {data[s.id]}
+//                             </p>
+//                         )}
+//                     </Section>
+//                 ))}
+//
+//                 <Section
+//                     id="contact"
+//                     title="CONTACT"
+//                     innerRef={(el) => (sectionRefs.current.contact = el)}
+//                 >
+//                     <a
+//                         href="mailto:ktondeh@gmail.com"
+//                         className="text-blue-600 underline"
+//                     >
+//                         ktondeh@gmail.com
+//                     </a>
+//                 </Section>
+//             </main>
+//         </div>
+//     );
+// }
+//
+// function Section({ id, title, children, innerRef }) {
+//     return (
+//         <section
+//             id={id}
+//             ref={innerRef}
+//             className="bg-white rounded-xl shadow-sm border border-slate-200 p-6 md:p-8"
+//         >
+//             <h2 className="text-xs font-semibold tracking-[0.3em] text-slate-500 mb-4">
+//                 {title}
+//             </h2>
+//             {children}
+//         </section>
+//     );
+// }
+//
+// export default PortfolioLayout;
