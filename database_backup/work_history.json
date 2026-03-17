@@ -1,0 +1,18 @@
+[
+{
+"company": "Decisive Point Consulting Group",
+"role": "Senior Backend Developer(contractor), 04/2025 - Current",
+"location": "Remote",
+"startYear": "02/2025",
+"endYear": "Current",
+"description": "Designed, developed, and deployed cloud-native backend solutions to support claims processing\nworkflows for the VA Health System using AWS services.\n•\nImplemented and maintained serverless architectures using AWS Lambda (Python), API Gateway, and\nStep Functions to streamline claims adjudication and automation logic.\n•\nInteracted with Amazon RDS (PostgreSQL) for secure data storage, manipulation, and retrieval of\nsensitive claims and healthcare records.\n•\nRefactored and optimized backend workflows for different types of claims, ensuring efficient processing,\nreduced latency, and improved system reliability.\n•\n• Secured applications with OAuth2, JWT authentication, and OpenID Connect, enhancing data protection.\nMonitored backend service performance using AWS CloudWatch, implementing proactive alerting and\nlogging strategies to ensure high availability.\n•\nCollaborated cross-functionally with DevSecOps, QA, and healthcare stakeholders to refine backend\nsystem requirements and align delivery with mission-critical goals.\n•\n• Collaborated in an Agile environment, refining user stories to ensure clarity and testability."
+},
+{
+"company": "Gogo Business Aviation",
+"role": "Software Engineer",
+"location": "Broomfield, CO",
+"startYear": "08/2022",
+"endYear": "02/2025",
+"description": "Designed, developed, and optimized microservices using Java, Python, Node.js, and Go on AWS, ensuring\nhigh performance and scalability.\n•\nBuilt and maintained RESTful APIs using Spring Boot, implementing Swagger documentation, and API\nversioning.\n•\nProfessional Summary\nWork History\nSecured APIs by implementing OAuth2, JWT authentication, and OpenID Connect, enhancing access\ncontrol, and data protection.\n•\nAutomated DynamoDB table population and management with Python scripts, efficiently handling CRUD\noperations, data integrity, and dynamic updates.\n•\nDeveloped and optimized CI/CD pipelines with Jenkins, automating build, test, and deployment processes\nfor faster, and more reliable releases.\n•\nCreated comprehensive technical documentation, including architecture diagrams, API specifications, and\nuser guides, ensuring seamless knowledge transfer.\n•\nWorked in an Agile environment, practicing paired programming, continuous integration, and iterative\ndevelopment for rapid feature delivery.\n•\nProvided production support, investigating system anomalies, analyzing logs, troubleshooting issues, and\nresolving customer-reported incidents efficiently.\n•\nCollaborated cross-functionally with product managers, designers, and engineers to translate business\nneeds into scalable technical solutions."
+}
+]
